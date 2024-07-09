@@ -1,38 +1,63 @@
+/* CARTELLA IMG DA COPIARE DA DENTRO LA CARTELLA aaaaaa sìSUL DESKTOP
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(34, 39, 40);
+  color: rgb(4, 206, 125);
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Scrollbar */
+
+html::-webkit-scrollbar {
+  width: 7px;
+}
+html::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0);
+}
+html::-webkit-scrollbar-thumb {
+  background: rgb(151, 151, 151);
+  border-radius: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  text-align: center;
+  margin: 3%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+footer {
+  background-color: rgb(30, 30, 30);
+  color: rgb(216, 243, 220);
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+.f-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 30px;
+  padding-right: 30px;
 }
-
-.App-link {
-  color: #61dafb;
+.f-item {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: x-small;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.f-item img {
+  width: 35px;
+  margin-left: 15px;
+  border: none;
+}
+.f-item img:hover {
+  filter: brightness(150%);
 }
