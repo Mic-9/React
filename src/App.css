@@ -1,11 +1,10 @@
-/* CARTELLA IMG DA COPIARE DA DENTRO LA CARTELLA aaaaaa sìSUL DESKTOP
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgb(34, 39, 40);
+  /*background-color: rgb(210, 231, 214);
   color: rgb(4, 206, 125);
+  VEDI COME RISOLVERE QUESTO*/
 }
 
 .App {
@@ -30,14 +29,15 @@ h1 {
   margin: 3%;
 }
 
-footer {
-  background-color: rgb(30, 30, 30);
+#footer {
+  background-color: rgb(184, 216, 190);
   color: rgb(216, 243, 220);
   position: fixed;
   left: 0px;
   right: 0px;
   bottom: 0px;
 }
+
 .f-container {
   display: flex;
   flex-direction: row;

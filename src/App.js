@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="App">
       <h1>Ricette Vegetariane</h1>
-      <footer>
+      <footer id="footer">
         <div className="f-container">
           <div className="f-item">Michele Maioli &copy; 2024</div>
           <div className="f-item">
