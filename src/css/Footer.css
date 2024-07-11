@@ -1,0 +1,31 @@
+.Footer {
+  background-color: rgb(184, 216, 190);
+  color: rgb(4, 206, 125);
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.F-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.F-item {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.F-item img {
+  filter: brightness(125%);
+  width: 35px;
+  margin-left: 15px;
+  border: none;
+}

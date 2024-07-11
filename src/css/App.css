@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(210, 231, 214);
+  color: rgb(4, 206, 125);
+}
+
+.App {
+  text-align: center;
+}
+
+/* Scrollbar */
+
+html::-webkit-scrollbar {
+  width: 7px;
+}
+html::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0);
+}
+html::-webkit-scrollbar-thumb {
+  background: rgb(151, 151, 151);
+  border-radius: 15px;
+}
+
+h1 {
+  text-align: center;
+  margin: 3%;
+}
