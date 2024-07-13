@@ -14,8 +14,6 @@ const App = () => {
         <Card></Card>
         <Card></Card>
         <Card></Card>
-        <Card></Card>
-        <Card></Card>
       </div>
       <Footer></Footer>
     </div>

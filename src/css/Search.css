@@ -1,7 +1,19 @@
+.search {
+  display: flex;
+  justify-content: center;
+}
+
 .input {
-  padding: 5px 5px 5px 10px;
-  border-radius: 15px;
-  margin: 6px 3px;
+  color: rgb(85, 107, 47);
+  width: 75%;
+  padding: 6px 5px;
+  border-radius: 15px 0px 0px 15px;
+  margin: 6px 0px;
   border: none;
 }
-/*finisci css search bar */
+.submit {
+  padding: 5px 5px;
+  border-radius: 0px 15px 15px 0px;
+  margin: 6px 0px;
+  border: none;
+}
