@@ -5,6 +5,8 @@ import Card from "./Card";
 import "./css/App.css";
 
 const App = () => {
+  console.log(process.env.REACT_APP_API_KEY);
+
   return (
     <div className="App">
       <h1>Ricette Vegetariane</h1>
