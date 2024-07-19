@@ -36,11 +36,3 @@ h1 {
   text-align: center;
   margin: 3%;
 }
-
-.CardsContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-bottom: 60px;
-}
