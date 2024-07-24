@@ -8,14 +8,16 @@ import "./css/App.css";
 const App = () => {
   const apiKey = process.env.REACT_APP_API_KEY;
 
-  const [ricette, setRicette] = useState([]);
   const [search, setSearch] = useState("");
   const [submit, setSubmit] = useState("");
+  const [ricette, setRicette] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
+  const fetchRicette = (query) => {
+    setLoading(true);
     axios
       .get(
-        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&diet=vegetarian&query=${submit}&number=99`
+        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&diet=vegetarian&query=${query}&number=99`
       )
       .then((response) => {
         if (response.data && Array.isArray(response.data.results)) {
@@ -28,7 +30,20 @@ const App = () => {
       .catch((e) => {
         console.error("errore dovuto a: ", e);
         setRicette([]);
+      })
+      .finally(() => {
+        setLoading(false);
       });
+  };
+
+  useEffect(() => {
+    fetchRicette("");
+  }, []);
+
+  useEffect(() => {
+    if (submit) {
+      fetchRicette(submit);
+    }
   }, [submit]);
 
   const updateSearch = (e) => {
@@ -40,6 +55,7 @@ const App = () => {
     setSubmit(search);
     setSearch("");
   };
+
   return (
     <div className="App">
       <h1>Ricette Vegetariane</h1>
@@ -48,10 +64,20 @@ const App = () => {
         updateSearch={updateSearch}
         handleSubmit={handleSubmit}
       ></Search>
-      <Card ricette={ricette}> </Card>
+      {loading ? <h2>loading...</h2> : <Card ricette={ricette}> </Card>}
       <Footer></Footer>
     </div>
   );
 };
 
 export default App;
+
+/*
+
+
+IMPARA A USARE
+
+REACT ROUTER
+
+
+*/
