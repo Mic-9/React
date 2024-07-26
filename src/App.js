@@ -58,20 +58,6 @@ const App = () => {
     setSearch("");
   };
 
-  /*
-      <div className="App">
-        <h1>Ricette Vegetariane</h1>
-        <Search
-          search={search}
-          updateSearch={updateSearch}
-          handleSubmit={handleSubmit}
-        ></Search>
-
-        {loading ? <h2>loading...</h2> : <Card ricette={ricette}> </Card>}
-        <Footer></Footer>
-      </div>
-      */
-
   return (
     <Router>
       <div className="App">
