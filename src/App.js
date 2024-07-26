@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Search from "./Search";
 import Footer from "./Footer";
 import Card from "./Card";
+import Recipe from "./Recipe";
 import "./css/App.css";
 
 const App = () => {
@@ -17,7 +19,7 @@ const App = () => {
     setLoading(true);
     axios
       .get(
-        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&diet=vegetarian&query=${query}&number=99`
+        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&diet=vegetarian&query=${query}&number=100`
       )
       .then((response) => {
         if (response.data && Array.isArray(response.data.results)) {
@@ -56,17 +58,48 @@ const App = () => {
     setSearch("");
   };
 
+  /*
+      <div className="App">
+        <h1>Ricette Vegetariane</h1>
+        <Search
+          search={search}
+          updateSearch={updateSearch}
+          handleSubmit={handleSubmit}
+        ></Search>
+
+        {loading ? <h2>loading...</h2> : <Card ricette={ricette}> </Card>}
+        <Footer></Footer>
+      </div>
+      */
+
   return (
-    <div className="App">
-      <h1>Ricette Vegetariane</h1>
-      <Search
-        search={search}
-        updateSearch={updateSearch}
-        handleSubmit={handleSubmit}
-      ></Search>
-      {loading ? <h2>loading...</h2> : <Card ricette={ricette}> </Card>}
-      <Footer></Footer>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <h1>Ricette Vegetariane</h1>
+                <Search
+                  search={search}
+                  updateSearch={updateSearch}
+                  handleSubmit={handleSubmit}
+                ></Search>
+
+                {loading ? (
+                  <h2>loading...</h2>
+                ) : (
+                  <Card ricette={ricette}> </Card>
+                )}
+              </>
+            }
+          />
+          <Route path="/Recipe" element={<Recipe />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 };
 
@@ -75,7 +108,7 @@ export default App;
 /*
 
 
-IMPARA A USARE
+sistema
 
 REACT ROUTER
 
