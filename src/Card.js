@@ -6,10 +6,10 @@ const Card = ({ ricette }) => {
   return (
     <Link to="/Recipe">
       <div className="cardContainer">
-        {ricette.map((ricetta) => (
-          <div className="card" key={ricetta.id}>
-            <img className="cardImg" src={ricetta.image} alt={ricetta.title} />
-            <h3 className="cardH3">{ricetta.title}</h3>
+        {ricette.map((ricette) => (
+          <div className="card" key={ricette.id}>
+            <img className="cardImg" src={ricette.image} alt={ricette.title} />
+            <h3 className="cardH3">{ricette.title}</h3>
           </div>
         ))}
       </div>
