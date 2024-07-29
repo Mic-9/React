@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./css/Recipe.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Ingredients from "./Ingredients";
 
 const Recipe = () => {
   const apiKey = process.env.REACT_APP_API_KEY;
@@ -41,11 +42,7 @@ const Recipe = () => {
           </ul>
           <div>
             <h3>ingradinenti</h3>
-            <ul>
-              <li>servings</li>
-              <li>servings</li>
-              <li>servings</li>
-            </ul>
+            <Ingredients info={info} />
           </div>
           <div>
             <h3>istruzioni</h3>
