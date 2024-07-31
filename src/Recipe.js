@@ -3,6 +3,7 @@ import "./css/Recipe.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Ingredients from "./Ingredients";
+import Instructions from "./Instructions";
 
 const Recipe = () => {
   const apiKey = process.env.REACT_APP_API_KEY;
@@ -12,7 +13,7 @@ const Recipe = () => {
   const FetchInfo = () => {
     axios
       .get(
-        `https://api.spoonacular.com/recipes/716429/information?apiKey=${apiKey}`
+        `https://api.spoonacular.com/recipes/324694/information?apiKey=${apiKey}`
       )
       .then((response) => {
         console.log(response.data);
@@ -46,11 +47,10 @@ const Recipe = () => {
           </div>
           <div>
             <h3>istruzioni</h3>
-            <p>qfhoghoghoighoh</p>
+            <Instructions />
           </div>
         </div>
       ))}
-
       <Link to="/">Go back</Link>
     </div>
   );

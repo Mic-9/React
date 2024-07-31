@@ -1,0 +1,11 @@
+.Recipe {
+  background-color: rgb(184, 216, 190);
+  color: rgb(85, 107, 47);
+  width: 95%;
+  padding: 50px;
+  border-radius: 10px;
+  margin: 30px 30px 60px 30px;
+
+  max-width: min-content;
+  margin: 0 auto;
+}
