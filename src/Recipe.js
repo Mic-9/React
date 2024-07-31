@@ -14,6 +14,12 @@ const Recipe = () => {
     axios
       .get(
         `https://api.spoonacular.com/recipes/324694/information?apiKey=${apiKey}`
+
+        /*
+          RENDI 
+          DINAMICO
+          L'ID
+        */
       )
       .then((response) => {
         console.log(response.data);
