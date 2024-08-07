@@ -3,15 +3,15 @@ import "./css/Ingredients.css";
 
 const Ingredients = ({ info }) => {
   return (
-    <div>
-      {info.extendedIngredients.map((ingradiente) => (
-        <ul key={ingradiente.id}>
-          <li>
-            {ingradiente.name} {ingradiente.amount}
+    <div className="Ingra">
+      <ul>
+        {info.extendedIngredients.map((ingradiente) => (
+          <li key={ingradiente.id}>
+            {ingradiente.name}: {ingradiente.amount}{" "}
             {ingradiente.measures.metric.unitShort}
           </li>
-        </ul>
-      ))}
+        ))}
+      </ul>
     </div>
   );
 };

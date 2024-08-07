@@ -1,0 +1,9 @@
+.Instructions {
+  width: 95%;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 5px auto;
+  max-width: 1200px;
+  box-sizing: border-box;
+  text-align: left;
+}

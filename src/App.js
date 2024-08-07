@@ -81,7 +81,7 @@ const App = () => {
               </>
             }
           />
-          <Route path="/Recipe" element={<Recipe />} />
+          <Route path="/Recipe/:id" element={<Recipe />} />
         </Routes>
         <Footer />
       </div>
@@ -90,13 +90,3 @@ const App = () => {
 };
 
 export default App;
-
-/*
-
-
-sistema
-
-REACT ROUTER
-
-
-*/

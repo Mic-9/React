@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./css/Instructions.css";
 import axios from "axios";
 
-const Instructions = () => {
+const Instructions = ({ recipeId }) => {
   const apiKey = process.env.REACT_APP_API_KEY;
 
   const [instruction, setInstruction] = useState([]);
@@ -10,7 +10,13 @@ const Instructions = () => {
   const FetchInstruction = () => {
     axios
       .get(
-        `https://api.spoonacular.com/recipes/324694/analyzedInstructions?apiKey=${apiKey}`
+        `https://api.spoonacular.com/recipes/${recipeId}/analyzedInstructions?apiKey=${apiKey}`
+
+        /*
+        
+        Sistema sto schifo
+        
+        */
       )
       .then((response) => {
         console.log(response.data);
@@ -22,7 +28,7 @@ const Instructions = () => {
       });
   };
   useEffect(() => {
-    FetchInstruction([]);
+    FetchInstruction();
   }, []);
 
   return (
