@@ -23,6 +23,11 @@ body {
   margin: 0 auto;
 }
 
+h1 {
+  text-align: center;
+  margin: 3%;
+}
+
 /* Scrollbar */
 
 html::-webkit-scrollbar {
@@ -34,9 +39,4 @@ html::-webkit-scrollbar-track {
 html::-webkit-scrollbar-thumb {
   background: rgb(184, 216, 190);
   border-radius: 15px;
-}
-
-h1 {
-  text-align: center;
-  margin: 3%;
 }
