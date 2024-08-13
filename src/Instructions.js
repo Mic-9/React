@@ -11,12 +11,6 @@ const Instructions = ({ recipeId }) => {
     axios
       .get(
         `https://api.spoonacular.com/recipes/${recipeId}/analyzedInstructions?apiKey=${apiKey}`
-
-        /*
-        
-        Sistema sto schifo
-        
-        */
       )
       .then((response) => {
         console.log(response.data);
@@ -29,7 +23,7 @@ const Instructions = ({ recipeId }) => {
   };
   useEffect(() => {
     FetchInstruction();
-  }, []);
+  }, [recipeId]);
 
   return (
     <div className="Instructions">

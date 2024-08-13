@@ -1,20 +1,21 @@
-.cardContainer {
+.card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  margin: 30px 0px 60px 0px;
+  margin: 30px 0 60px;
 }
 .card {
   background-color: rgb(184, 216, 190);
   color: rgb(85, 107, 47);
   width: 300px;
   padding: 0px 0px 10px 0px;
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 0 0 10px 10px;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.cardH3 {
+.card-H3 {
   padding: 10px;
   text-align: center;
   margin-top: auto;

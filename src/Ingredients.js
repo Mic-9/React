@@ -3,7 +3,7 @@ import "./css/Ingredients.css";
 
 const Ingredients = ({ info }) => {
   return (
-    <div className="Ingra">
+    <div className="ingr">
       <ul>
         {info.extendedIngredients.map((ingradiente) => (
           <li key={ingradiente.id}>

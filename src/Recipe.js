@@ -11,6 +11,8 @@ const Recipe = () => {
   const apiKey = process.env.REACT_APP_API_KEY;
 
   const [info, setInfo] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const fetchInfo = () => {
     axios
@@ -18,20 +20,27 @@ const Recipe = () => {
         `https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`
       )
       .then((response) => {
-        console.log(response.data);
         setInfo(response.data);
+        setError(null);
       })
       .catch((e) => {
         console.error("errore dovuto a: ", e);
-        setInfo(null);
+        setError("Impossibile caricare la ricetta.");
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
   useEffect(() => {
     fetchInfo();
   }, [id]);
 
-  if (!info) {
-    return <h2>Caricamento...</h2>;
+  if (loading) {
+    return <h2>Loading...</h2>;
+  }
+
+  if (error) {
+    return <h2>{error}</h2>;
   }
 
   return (
@@ -40,18 +49,16 @@ const Recipe = () => {
         <h1>{info.title}</h1>
         <img src={info.image} alt={info.title} />
         <ul className="Info">
-          <li>servings for: {info.servings}</li>
-          <li>ready in: {info.readyInMinutes} min</li>
-          <li>cooking: {info.cookingMinutes}min</li>
-          <li>preparation: {info.preparationMinutes}min</li>
+          <li>Servings for: {info.servings}</li>
+          <li>Ready in: {info.readyInMinutes} min</li>
         </ul>
         <div>
-          <h2 className="title">Ingredienti</h2>
+          <h2 className="title">Ingredients</h2>
           <Ingredients info={info} />
         </div>
         <div>
-          <h2 className="title">Procedimento</h2>
-          <Instructions info={info} />
+          <h2 className="title">Instructions</h2>
+          <Instructions recipeId={info.id} />
         </div>
       </div>
       <Link className="Back" to="/">

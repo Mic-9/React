@@ -1,54 +1,42 @@
-.Ingra {
+.ingr {
   width: 95%;
   padding: 5px;
   border-radius: 10px;
-  margin: 5px auto;
+  margin: 5px auto 60px;
   max-width: 1200px;
-  box-sizing: border-box;
   text-align: left;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  margin: 0px 0px 60px 0px;
 }
 
-.Ingra ul {
+.ingr ul {
   padding-left: 40px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  list-style-type: disc;
   gap: 20px;
+  list-style-type: disc;
   margin: 0;
 }
 
-.Ingra ul li {
+.ingr ul li {
   padding: 5px;
   flex: 1 1 calc(50% - 20px);
-  box-sizing: border-box;
   position: relative;
-  list-style-type: inherit;
-  list-style-position: outside;
 }
 
 @media (max-width: 600px) {
-  .Ingra ul {
+  .ingr ul {
     padding-left: 20px;
     flex-direction: column;
     gap: 10px;
   }
 
-  .Ingra ul li {
+  .ingr ul li {
     flex: none;
     width: 100%;
     padding-left: 0;
-    list-style-position: outside;
   }
 }
-
-/*
-
-prova mobile
-
-*/

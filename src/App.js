@@ -22,12 +22,7 @@ const App = () => {
         `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&diet=vegetarian&query=${query}&number=100`
       )
       .then((response) => {
-        if (response.data && Array.isArray(response.data.results)) {
-          setRicette(response.data.results);
-        } else {
-          console.error("errore risposta api");
-          setRicette([]);
-        }
+        setRicette(response.data.results);
       })
       .catch((e) => {
         console.error("errore dovuto a: ", e);
@@ -39,18 +34,8 @@ const App = () => {
   };
 
   useEffect(() => {
-    fetchRicette("");
-  }, []);
-
-  useEffect(() => {
-    if (submit) {
-      fetchRicette(submit);
-    }
+    fetchRicette(submit);
   }, [submit]);
-
-  const updateSearch = (e) => {
-    setSearch(e.target.value);
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -66,18 +51,14 @@ const App = () => {
             path="/"
             element={
               <>
-                <h1>Ricette Vegetariane</h1>
+                <h1>Vegetarian Recipes</h1>
                 <Search
                   search={search}
-                  updateSearch={updateSearch}
+                  updateSearch={(e) => setSearch(e.target.value)}
                   handleSubmit={handleSubmit}
                 ></Search>
 
-                {loading ? (
-                  <h2>loading...</h2>
-                ) : (
-                  <Card ricette={ricette}> </Card>
-                )}
+                {loading ? <h2>Loading...</h2> : <Card ricette={ricette} />}
               </>
             }
           />

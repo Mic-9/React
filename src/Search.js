@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/Search.css";
 
-const Search = ({ search, updateSearch, submit, handleSubmit }) => {
+const Search = ({ search, updateSearch, /*submit,*/ handleSubmit }) => {
   return (
     <form className="search" onSubmit={handleSubmit}>
       <input
@@ -10,7 +10,7 @@ const Search = ({ search, updateSearch, submit, handleSubmit }) => {
         value={search}
         onChange={updateSearch}
       ></input>
-      <button className="submit" type="submit" onClick={submit}>
+      <button className="submit" type="submit" /*onClick={submit}*/>
         🔍
       </button>
     </form>

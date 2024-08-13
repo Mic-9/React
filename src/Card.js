@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 
 const Card = ({ ricette }) => {
   return (
-    <div className="cardContainer">
+    <div className="card-container">
       {ricette.map((ricetta) => (
         <Link to={`/Recipe/${ricetta.id}`} key={ricetta.id}>
           <div className="card">
-            <img className="cardImg" src={ricetta.image} alt={ricetta.title} />
-            <h3 className="cardH3">{ricetta.title}</h3>
+            <img src={ricetta.image} alt={ricetta.title} />
+            <h3 className="card-H3">{ricetta.title}</h3>
           </div>
         </Link>
       ))}

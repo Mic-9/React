@@ -5,27 +5,23 @@
   left: 0px;
   right: 0px;
   bottom: 0px;
+  padding: 5px 30px;
 }
 
 .F-container {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   box-sizing: border-box;
-  padding-left: 30px;
-  padding-right: 30px;
 }
 
 .F-item {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 5px 0;
 }
 
 .F-item img {
   filter: brightness(125%);
   width: 25px;
   margin-left: 15px;
-  border: none;
 }

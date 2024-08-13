@@ -4,15 +4,12 @@
   width: 95%;
   padding: 20px;
   border-radius: 10px;
-  margin: 30px auto;
-  margin-bottom: 60px;
-  max-width: 1200px;
-  box-sizing: border-box;
+  margin: 30px auto 60px;
 }
 
 .title {
   margin-bottom: 20px;
-  padding: 15px 5px 10px 5px;
+  padding: 15px 5px 10px;
   text-align: left;
   border-top: 1px solid black;
 }
@@ -27,21 +24,18 @@
   flex-wrap: wrap;
   justify-content: space-around;
   list-style-type: none;
-  margin-top: 10px;
+  margin: 10px 0;
   margin-bottom: 10px;
   padding: 5px;
   border-top: 1px solid black;
-  box-sizing: border-box;
   font-weight: bold;
 }
 .Info li {
   flex: 1 1 50px;
   margin: 10px;
-  box-sizing: border-box;
 }
 
 .Back {
-  text-decoration: none;
   border-radius: 10px;
   padding: 10px;
   color: rgb(210, 231, 214);

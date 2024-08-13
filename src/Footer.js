@@ -9,13 +9,19 @@ const Footer = () => {
       <div className="F-container">
         <div className="F-item">Michele Maioli &copy; 2024</div>
         <div className="F-item">
-          <a id="git" href="https://github.com/Mic-9" target="_blank">
+          <a
+            id="git"
+            href="https://github.com/Mic-9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={github} alt="GitHub Logo" />
           </a>
           <a
             id="link"
             href="https://www.linkedin.com/in/michelemaioli"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <img src={linkedin} alt="LinkedIn Icon" />
           </a>

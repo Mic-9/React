@@ -1,12 +1,13 @@
 .search {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .input {
   color: rgb(85, 107, 47);
   width: 75%;
-  padding: 6px 5px;
+  padding: 6px 8px;
   border-radius: 15px 0px 0px 15px;
   margin: 6px 0px;
   border: none;
@@ -16,4 +17,9 @@
   border-radius: 0px 15px 15px 0px;
   margin: 6px 0px;
   border: none;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: rgb(70, 130, 70);
 }
