@@ -23,7 +23,7 @@ const Instructions = ({ recipeId }) => {
   };
   useEffect(() => {
     FetchInstruction();
-  }, [recipeId]);
+  }, [recipeId, FetchInstruction]);
 
   return (
     <div className="Instructions">

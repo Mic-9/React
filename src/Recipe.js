@@ -33,7 +33,7 @@ const Recipe = () => {
   };
   useEffect(() => {
     fetchInfo();
-  }, [id]);
+  }, [id, fetchInfo]);
 
   if (loading) {
     return <h2>Loading...</h2>;

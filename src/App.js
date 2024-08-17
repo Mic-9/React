@@ -35,7 +35,7 @@ const App = () => {
 
   useEffect(() => {
     fetchRicette(submit);
-  }, [submit]);
+  }, [submit, fetchRicette]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
