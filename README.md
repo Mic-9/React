@@ -10,11 +10,11 @@ The design is user friendly, featuring a simple grid of cards that display the t
 
 ## Built With
 
-- [JavaScript]()
-- [HTML]()
-- [CSS]()
-- [Webpack]()
-- [React]()
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [Webpack](https://webpack.js.org/)
+- [React](https://reactjs.org/)
 
 ## Author
 
@@ -24,4 +24,4 @@ The design is user friendly, featuring a simple grid of cards that display the t
 ## License
 
 ![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
-[MIT](https://choosealicense.com/licenses/mit/)
+This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/)
