@@ -1,12 +1,12 @@
 # Vegetarian Recipes
 
-This application allows you to discover and search for vegetarian recipes using the [Spoonacular API](https://spoonacular.com/food-api/docs) service. [Try it here!](.netlify.app/)
+This application allows you to discover and search for vegetarian recipes using the [Spoonacular API](https://spoonacular.com/food-api/docs) service. [Try it here!](https://reactvegetarianrecipes.netlify.app/)
 
 ## Minimal Design
 
 The design is user friendly, featuring a simple grid of cards that display the title, an image, and a link to the full recipe.
 
-![](Screenshot.png)
+![](public/Screenshot.png)
 
 ## Built With
 
@@ -14,7 +14,7 @@ The design is user friendly, featuring a simple grid of cards that display the t
 - [HTML]()
 - [CSS]()
 - [Webpack]()
-- [React] ()
+- [React]()
 
 ## Author
 
