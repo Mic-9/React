@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./css/Recipe.css";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
@@ -14,7 +14,7 @@ const Recipe = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const fetchInfo = () => {
+  const fetchInfo = useCallback(() => {
     axios
       .get(
         `https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`
@@ -30,7 +30,7 @@ const Recipe = () => {
       .finally(() => {
         setLoading(false);
       });
-  };
+  }, [apiKey, id]);
   useEffect(() => {
     fetchInfo();
   }, [id, fetchInfo]);

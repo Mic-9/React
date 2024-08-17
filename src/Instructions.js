@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./css/Instructions.css";
 import axios from "axios";
 
@@ -7,7 +7,7 @@ const Instructions = ({ recipeId }) => {
 
   const [instruction, setInstruction] = useState([]);
 
-  const FetchInstruction = () => {
+  const FetchInstruction = useCallback(() => {
     axios
       .get(
         `https://api.spoonacular.com/recipes/${recipeId}/analyzedInstructions?apiKey=${apiKey}`
@@ -20,7 +20,7 @@ const Instructions = ({ recipeId }) => {
         console.error("errore dovuto a: ", e);
         setInstruction([]);
       });
-  };
+  }, [apiKey, recipeId]);
   useEffect(() => {
     FetchInstruction();
   }, [recipeId, FetchInstruction]);

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Search from "./Search";
@@ -15,23 +15,26 @@ const App = () => {
   const [ricette, setRicette] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const fetchRicette = (query) => {
-    setLoading(true);
-    axios
-      .get(
-        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&diet=vegetarian&query=${query}&number=100`
-      )
-      .then((response) => {
-        setRicette(response.data.results);
-      })
-      .catch((e) => {
-        console.error("errore dovuto a: ", e);
-        setRicette([]);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  };
+  const fetchRicette = useCallback(
+    (query) => {
+      setLoading(true);
+      axios
+        .get(
+          `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&diet=vegetarian&query=${query}&number=100`
+        )
+        .then((response) => {
+          setRicette(response.data.results);
+        })
+        .catch((e) => {
+          console.error("errore dovuto a: ", e);
+          setRicette([]);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    },
+    [apiKey]
+  );
 
   useEffect(() => {
     fetchRicette(submit);
