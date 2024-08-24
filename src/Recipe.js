@@ -24,8 +24,8 @@ const Recipe = () => {
         setError(null);
       })
       .catch((e) => {
-        console.error("errore dovuto a: ", e);
-        setError("Impossibile caricare la ricetta.");
+        console.error("error due to: ", e);
+        setError("Error loading recipe.");
       })
       .finally(() => {
         setLoading(false);
