@@ -1,7 +1,7 @@
 import React from "react";
-import linkedin from "./img/linkedin-icon.svg";
-import github from "./img/logo-github.svg";
-import "./css/Footer.css";
+import linkedin from "../../img/linkedin-icon.svg";
+import github from "../../img/logo-github.svg";
+import "./Footer.css";
 
 const Footer = () => {
   return (

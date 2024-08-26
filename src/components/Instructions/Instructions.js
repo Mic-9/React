@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import "./css/Instructions.css";
+import "./Instructions.css";
 import axios from "axios";
 
 const Instructions = ({ recipeId }) => {

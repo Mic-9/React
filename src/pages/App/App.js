@@ -1,11 +1,11 @@
 import React, { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Search from "./Search";
-import Footer from "./Footer";
-import Card from "./Card";
-import Recipe from "./Recipe";
-import "./css/App.css";
+import Search from "../../components/Search/Search";
+import Footer from "../../components/Footer/Footer";
+import Card from "../../components/Card/Card";
+import Recipe from "../Recipe/Recipe";
+import "./App.css";
 
 const App = () => {
   const apiKey = process.env.REACT_APP_API_KEY;

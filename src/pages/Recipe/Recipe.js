@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useState } from "react";
-import "./css/Recipe.css";
+import "./Recipe.css";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
-import Ingredients from "./Ingredients";
-import Instructions from "./Instructions";
+import Ingredients from "../../components/Ingredients/Ingredients";
+import Instructions from "../../components/Instructions/Instructions";
 
 const Recipe = () => {
   const { id } = useParams();
