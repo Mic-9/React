@@ -13,10 +13,10 @@ const App = () => {
 
   const [search, setSearch] = useState("");
   const [submit, setSubmit] = useState("");
-  const [ricette, setRicette] = useState([]);
+  const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const fetchRicette = useCallback(
+  const fetchRecipes = useCallback(
     (query) => {
       setLoading(true);
       axios
@@ -24,11 +24,11 @@ const App = () => {
           `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&diet=vegetarian&query=${query}&number=100`
         )
         .then((response) => {
-          setRicette(response.data.results);
+          setRecipes(response.data.results);
         })
         .catch((e) => {
-          console.error("errore dovuto a: ", e);
-          setRicette([]);
+          console.error("error due to: ", e);
+          setRecipes([]);
         })
         .finally(() => {
           setLoading(false);
@@ -38,8 +38,8 @@ const App = () => {
   );
 
   useEffect(() => {
-    fetchRicette(submit);
-  }, [submit, fetchRicette]);
+    fetchRecipes(submit);
+  }, [submit, fetchRecipes]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -65,7 +65,7 @@ const App = () => {
                   handleSubmit={handleSubmit}
                 ></Search>
 
-                {loading ? <h2>Loading...</h2> : <Card ricette={ricette} />}
+                {loading ? <h2>Loading...</h2> : <Card recipe={recipes} />}
               </>
             }
           />
