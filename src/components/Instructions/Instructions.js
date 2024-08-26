@@ -17,7 +17,7 @@ const Instructions = ({ recipeId }) => {
         setInstruction(response.data);
       })
       .catch((e) => {
-        console.error("error due to: ", e);
+        console.error("errore dovuto a: ", e);
         setInstruction([]);
       });
   }, [apiKey, recipeId]);
