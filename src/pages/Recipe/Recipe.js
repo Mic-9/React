@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import Ingredients from "../../components/Ingredients/Ingredients";
 import Instructions from "../../components/Instructions/Instructions";
+import { Helmet } from "react-helmet";
 
 const Recipe = () => {
   const { id } = useParams();
@@ -45,6 +46,10 @@ const Recipe = () => {
 
   return (
     <div className="Recipe">
+      <Helmet>
+        <title>{info.title}</title>
+      </Helmet>
+
       <div key={info.id}>
         <h1>{info.title}</h1>
         <img src={info.image} alt={info.title} />

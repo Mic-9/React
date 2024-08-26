@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Search from "../../components/Search/Search";
 import Footer from "../../components/Footer/Footer";
 import Card from "../../components/Card/Card";
@@ -49,6 +50,9 @@ const App = () => {
   return (
     <Router>
       <div className="App">
+        <Helmet>
+          <title>Vegetarian Recipes</title>
+        </Helmet>
         <Routes>
           <Route
             path="/"
